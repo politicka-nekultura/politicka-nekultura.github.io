@@ -10,7 +10,7 @@ FILES_TAG = list(
 
 AUTHOR = 'politicka-nekultura'
 SITENAME = "/* Politička nekultura */"
-SITEURL = "https://politicka-nekultura.github.io/index.html"
+SITEURL = "https://politicka-nekultura.github.io"
 
 PATH = "content"
 
