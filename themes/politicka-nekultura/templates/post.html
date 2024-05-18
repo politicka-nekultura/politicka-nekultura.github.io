@@ -1,0 +1,65 @@
+{% set sites_w_trunc = ["index.html"] %}
+{% set is_in_trunc = false %}
+{% if output_file in FILES_CATEGORY
+    or output_file in sites_w_trunc
+    or output_file in FILES_TAG %}
+    {% set is_in_trunc = true %}
+{% endif %}
+
+<div class="post type-post status-publish format-standard hentry category-general" id="post">
+    <div class="entry-meta">
+        <div class="date">{{ article.locale_date }}</div>
+
+        {% if DISPLAY_CATEGORIES_ON_MENU %}
+            <span class="cat-links">
+                <a href="{{ SITEURL }}/{{ article.category.url }}"
+                    title="Svi tekstovi u kategoriji {{ article.category }}"
+                    rel="category tag">{{ article.category }}
+                </a>
+            </span>
+        {% endif %}
+
+    </div> <!-- /#entry-meta -->
+
+    <div class="main">
+        <h2 class={% if is_in_trunc %}
+            "entry-title"
+        {% else %}
+            "entry-title-central"
+        {% endif %}
+        >
+
+            {% if is_in_trunc %}
+                <a href="{{ SITEURL }}/{{ article.url }}"
+                    title="Poveznica na {{ article.title|striptags }}"
+                    rel="bookmark">{{ article.title }}
+                </a>
+            {% else %}
+                {{ article.title }}
+            {% endif %}
+        </h2>
+
+        <div class="entry-content">
+            {% if is_in_trunc %}
+                {{ article.content | truncate(
+                    1000,
+                    False,
+                    "..."
+                )}}
+                <a href="{{ article.url }}">Tekst se nastavlja na poveznici.</a>
+            {% else %}
+                {{ article.content }}
+            {% endif %}
+        </div> <!--/#entry-content-->
+
+        {% if article.tags %}
+            <span class="tag-links">
+                Oznake:
+                {% set delimiter = joiner() %}
+                {% for tag in article.tags|sort %}{{- delimiter() }} 
+                    <a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
+                {% endfor %}
+            </span>
+        {% endif %}
+    </div> <!--/#main-->
+</div>  <!--/#post-->

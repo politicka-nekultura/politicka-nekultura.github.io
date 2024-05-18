@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="{{ DEFAULT_LANG }}">
+    <head>
+        {% block head %}
+            <title>
+                {% block title %}
+                    {{ SITENAME }}
+                {% endblock title %}
+            </title>
+            <meta charset="utf-8" />
+            <link rel="stylesheet" type="text/css" href="/theme/css/style.css" />
+            <link rel="alternate" type="application/atom+xml"
+                title="{{ SITENAME }} — Flux Atom"
+                href="{{ SITEURL }}/{{ FEED }}" /> 
+            {% if FEED_RSS %}
+                <link rel ="alternate" type="application/rss+xml"
+                    title="{{ SITENAME }} — Flux RSS"
+                    href="{{ SITEURL }}/{{ FEED_RSS }}" /> 
+            {% endif %}
+        {% endblock head %}
+    </head>
+
+    <body class="home blog custom-background {% if SINGLE_AUTHOR %}single-author{% endif %}" >
+        <div id="container">
+            <div id="header">
+                <h1 id="site-title">
+                    <a id="site-title", href="{{ SITEURL }}">{{ SITENAME }}</a>
+                </h1>
+
+                {% if SITESUBTITLE %}
+                    <h2 id="site-description">{{ SITESUBTITLE }}</h2>
+                {% endif %}
+
+            </div><!-- /#banner -->
+                    
+            <div id="menu">
+                <div class="menu-navigation-container">
+                    <ul id="menu-navigation" class="menu">
+
+                        {% if DISPLAY_CATEGORIES_ON_MENU %}
+                            {% for cat, null in categories %}
+                                <li
+                                    {% if cat == category %}
+                                        class="active"
+                                    {% endif %}
+                                    class="menu-item menu-item-type-post_type menu-item-object-page"
+                                >
+                                    <a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div> <!--/#menu-navigation-container-->
+            </div><!-- /#menu -->
+                    
+            <div class="page-title">
+                {% block content_title %}{% endblock %}
+            </div>
+            
+            <div id="contents">
+                {% block content %}
+                {% endblock %}
+            </div>
+                    
+            {% include 'footer.html' %}
+                
+        </div><!-- /#container -->
+        <div style="display:none"></div>
+    </body>
+</html>

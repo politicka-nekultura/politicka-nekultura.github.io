@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block title %}
+    {{ SITENAME }} &mdash; Tekstovi u kategoriji {{ category | striptags }}
+{% endblock %}
+
+{% block content_title %}
+    <div class="page-title">
+        <h2>Tekstovi u kategoriji <i>{{ category }}</i>.</h2>
+    </div>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html lang="{{ DEFAULT_LANG }}">
+    <head>
+        {% block head %}
+            <title>
+                {% block title %}
+                    {{ SITENAME }} &mdash; {{ article.title|striptags }}
+                {% endblock title %}
+            </title>
+            <meta charset="utf-8" />
+            <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/style.css" />
+            <link rel="alternate" type="application/atom+xml"
+                title="{{ SITENAME }} — Flux Atom"
+                href="{{ SITEURL }}/{{ FEED }}" /> 
+            {% if FEED_RSS %}
+                <link rel ="alternate" type="application/rss+xml"
+                    title="{{ SITENAME }} — Flux RSS"
+                    href="{{ SITEURL }}/{{ FEED_RSS }}" /> 
+            {% endif %}
+        {% endblock head %}
+    </head>
+
+    <body class="post type-post status-publish format-standard hentry category-general
+        {% if SINGLE_AUTHOR %}single-author{% endif %}"
+    >
+        <div id="container">
+            <div id="header">
+                <h1 id="site-title">
+                    <a id="site-title", href="{{ SITEURL }}">{{ SITENAME }}</a>
+                </h1>
+
+                {% if SITESUBTITLE %}
+                    <h2 id="site-description">{{ SITESUBTITLE }}</h2>
+                {% endif %}
+
+            </div><!-- /#banner -->
+                    
+            <div class="page-title">
+                {% block content_title %}{% endblock %}
+            </div>
+            
+            <div id="contents">
+                {% block content %}
+                    {% include 'post.html' %}
+                {% endblock %}
+            </div>
+                    
+            {% include 'footer.html' %}
+
+        </div><!-- /#container -->
+        <div style="display:none"></div>
+    </body>
+</html>
+

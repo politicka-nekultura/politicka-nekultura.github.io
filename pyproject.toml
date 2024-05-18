@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "blog-politicka-nekultura"
+version = "0.1.0"
+description = "Sadržaj bloga \"Politička nekultura\""
+authors = ["politicka-nekultura <politicka-nekultura@protonmail.com>"]
+license = "CC BY-NC 4.0"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pelican = {extras = ["markdown"], version = "^4.9.1"}
+typogrify = "^2.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

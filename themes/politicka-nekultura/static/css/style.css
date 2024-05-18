@@ -1,0 +1,935 @@
+@import url("pygment.css");
+
+@font-face {
+    font-family: "Latin Modern Roman Caps";
+    src: url(../resources/lmromancaps10-regular.otf);
+}
+
+@font-face {
+    font-family: "Latin Modern Roman Regular";
+    src: url(../resources/fonts/lmroman10-regular.otf);
+}
+
+@font-face {
+    font-family: "Latin Modern Roman Bold";
+    src: url(../resources/fonts/lmroman10-bold.otf);
+}
+
+@font-face {
+    font-family: "Latin Modern Roman Bolditalic";
+    src: url(../resources/fonts/lmroman10-bolditalic.otf);
+}
+
+@font-face {
+    font-family: "Latin Modern Mono Prop Regular";
+    src: url(../resources/fonts/lmmonoprop10-regular.otf);
+}
+
+@font-face {
+    font-family: "Latin Modern Roman Italic";
+    src: url(../resources/fonts/lmroman10-italic.otf);
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Bold";
+    src: url(../resources/fonts/NotoSansMono-Bold-Nerd-Font-Complete.ttf);
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Medium";
+    src: url(../resources/fonts/NotoSansMono-Medium-Nerd-Font-Complete.ttf);
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Regular";
+    src: url(../resources/fonts/NotoSansMono-Regular-Nerd-Font-Complete.ttf);
+}
+
+/* =Base
+----------------------------------------------- */
+
+:root {
+    --background-color: #e2d4d0;
+    --accent-color: #a0bb64;
+
+    --text-body-color: #000000;
+    --text-body-size: 16px;
+    --text-accent-color: #697c3e;
+
+    --accent-font: "Latin Modern Mono Prop Regular";
+    --body-font: "Latin Modern Roman Regular";
+
+    --link-font: "Noto Sans Mono Regular";
+
+    --monospace-font: "Noto Sans Mono Regular";
+
+    --line-height: 1.40;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-body-color);
+    font-family: var(--body-font), serif;
+    font-size: var(--text-body-size);
+    margin: 0;
+    line-height: var(--line-height);
+    text-align: center;
+}
+
+div.entry-content h1 {
+    font-size: 26px;
+}
+
+div.entry-content h2 {
+    font-size: 22px;
+}
+
+p {
+    line-height: var(--line-height);
+}
+
+#container {
+    height: auto;
+    margin: 0 auto;
+    width: 800px;
+}
+
+#header {
+    min-height: 180px;
+    padding-top: 70px;
+    width: 800px;
+}
+
+#contents {
+    border-left: 2px solid var(--accent-color);
+    height: auto;
+    margin-left: 199px;
+    padding-bottom: 10px;
+}
+
+
+/* =Header
+----------------------------------------------- */
+#site-title {
+    font-family: "Latin Modern Mono Prop Regular", monospace;
+    font-weight: normal;
+    font-size: 60px;
+    margin: 0px;
+}
+
+#site-title a {
+    color: var(--text-body-color);
+    letter-spacing: 0px;
+    text-decoration: none;
+}
+
+#site-title a:hover {
+    color: var(--text-accent-color);
+}
+
+#site-description {
+    border-radius: 3px;
+    color: var(--text-body-color);
+    display: inline-block;
+    font-family: var(--accent-font);
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 50px;
+    padding: 6px 10px;
+}
+
+#menu #header-image a {
+    margin: 0;
+    padding: 0;
+}
+
+/* =Menu
+----------------------------------------------- */
+#menu {
+    border-bottom: 2px solid var(--accent-color);
+    border-top: 2px solid var(--accent-color);
+    margin-bottom: 25px;
+    padding: 10px;
+    text-align: right;
+    width: 800px;
+}
+
+#menu img {
+    margin-bottom: 10px;
+}
+
+#menu a {
+    color: #666;
+    font-family: var(--accent-font), monospace;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 4px 0;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+#menu a:hover {
+    color: var(--accent-color);
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+#menu li {
+    float: right;
+    position: relative;
+}
+
+#access a {
+    color: var(--accent-color);
+    display: block;
+
+    text-decoration: none;
+}
+
+#menu ul ul {
+    display: none;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 2em;
+    z-index: 99999;
+}
+
+#menu ul ul ul {
+    right: 100%;
+    top: 0;
+}
+
+#menu ul ul a {
+    background: var(--background-color);
+    border-bottom: 1px solid var(--accent-color);
+    display: block;
+    font-size: 14px;
+    height: auto;
+    line-height: 1em;
+    margin: 0;
+    padding: .8em .5em .8em 1em;
+    width: 130px;
+}
+
+#menu ul ul li:last-of-type a {
+    border-bottom: none;
+}
+
+#menu li:hover > a,
+#menu ul ul :hover > a {
+    color: #444;
+}
+
+#menu ul ul a:hover {
+    background: #f0f0f0;
+}
+
+#menu ul li:hover > ul {
+    display: block;
+}
+
+#menu ul li.current_page_item > a,
+#menu ul li.current_page_ancestor > a,
+#menu ul li.current-menu-item > a,
+#menu ul li.menu-item > a
+{
+    color: var(--text-body-color);
+    font-family: var(--monospace-font);
+    font-size: 14px;
+}
+
+#menu ul li.menu-item > a:hover
+{
+    color: var(--text-accent-color);
+}
+
+#menu ul li.active > a {
+    color: var(--text-accent-color);
+}
+
+#menu ul:after {
+    clear: both;
+    content: ' ';
+    display: block;
+}
+
+/* =Content
+----------------------------------------------- */
+.hentry {
+    height: auto;
+    clear: both;
+    position: relative;
+}
+
+.hentry:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.hentry .main {
+    border-bottom: 1px dashed #ddd;
+    float: left;
+    line-height: 175%;
+    padding: 29px 5px 15px 15px;
+    text-align: left;
+    width: 580px;
+}
+
+.hentry .entry-meta {
+    font-family: var(--accent-font), monospace;
+    font-size: 25px;
+    float: left;
+    margin: 35px 0 0 -199px;
+    padding: 0px;
+    text-align: right;
+    width: 190px;
+}
+
+.hentry .entry-meta a {
+    text-decoration: none;
+}
+
+.hentry .entry-meta div {
+    margin: 10px;
+}
+
+.hentry .entry-meta .date {
+    color: var(--text-body-color);
+    font-family: var(--monospace-font);
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px;
+}
+
+.hentry .entry-meta .comments {
+    color: var(--text-body-color);
+    display: block;
+    font-size: var(--text-body-size);
+    margin: -4px 0 0;
+}
+
+.hentry .entry-meta .comments a {
+    color: var(--accent-color);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hentry .entry-meta .cat-links {
+    color: var(--text-accent-color);
+    font-size: var(--text-body-size);
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.hentry .entry-meta .cat-links a {
+    color: var(--text-body-color);
+}
+
+.hentry .entry-meta .cat-links a:hover {
+    color: var(--text-accent-color);
+}
+
+.hentry .entry-meta .edit-link a {
+    font-size: var(--text-body-size);
+}
+
+.hentry div.margin {
+    margin: 10px;
+}
+
+.entry-title {
+    color: var(--text-body-color);
+    font-family: var(--accent-font), sans-serif;
+    font-size: 26px;
+    line-height: 38px;
+    margin: 5px 0px 15px 0px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.entry-title a {
+    color: var(--text-body-color);
+    text-decoration: none;
+    line-height: 1.25;
+}
+
+.entry-title a:hover {
+    color: var(--text-accent-color);
+    text-decoration: none;
+}
+
+.entry-meta .byline {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.entry-meta .byline a {
+    color: #777;
+}
+
+.single-author .entry-meta .byline {
+    display: none;
+}
+
+blockquote {
+    background: none;
+    border-left: 10px solid var(--accent-color);
+    color: var(--text-body-color);
+    font-family: var(--text-body-font), serif;
+    font-size: var(--text-body-size);
+    padding: 10px;
+    text-align: justify;
+}
+
+a {
+    color: var(--text-accent-color);
+    font-family: var(--link-font);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.entry-content a img {
+    border: 10px solid #ddd;
+}
+
+.entry-content a:hover img {
+    border: 10px solid #000;
+}
+
+b, strong {
+    color: var(--text-body-color);
+}
+
+.cat-links,
+.tag-links {
+    display: block;
+}
+
+.tag-links strong {
+    background: none;
+    border-radius: 3px;
+    color: var(--text-body-color);
+    font-weight: normal;
+    margin-right: 4px;
+    padding: 3px 6px;
+}
+
+.entry-content table {
+    margin: 0 0 20px 0;
+    text-align: left;
+    width: 100%;
+}
+
+.entry-content tr th,
+.entry-content thead th {
+    color: #888;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 9px 24px;
+}
+
+.entry-content tr td {
+    padding: 6px 24px;
+}
+
+.entry-content tr.alternate td {
+    background: #f5f5f5;
+}
+
+.page-link a {
+    background: #36bcab;
+    border-radius: 26px;
+    color: #000;
+    font-weight: normal;
+    display: inline-block;
+    line-height: 26px;
+    margin: 0 0 1em;
+    text-align: center;
+    text-decoration: none;
+    width: 26px;
+}
+
+.page-link a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.page-title h2 {
+    background: none;
+    color: var(--text-accent-color);
+    display: inline-block;
+    font-weight: normal;
+    margin: 0 0 20px;
+    padding: 3px 14px;
+}
+
+.navigation {
+    margin: 10px 0;
+}
+
+.navigation div {
+    display: inline;
+    margin: 0 5px;
+}
+
+a.text-continued {
+    font-family: var(--text-body-font);
+    color: var(--text-accent-color);
+    font-size: var(--text-body-size);
+}
+
+/* Alignment */
+.alignleft {
+    display: inline;
+    float: left;
+}
+.alignright {
+    display: inline;
+    float: right;
+}
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* General */
+ol ol {
+    list-style: upper-alpha;
+}
+
+ol ol ol {
+    list-style: lower-roman;
+}
+ul ul, ol ol, ul ol, ol ul {
+    margin-bottom: 0;
+}
+
+/* Sticky */
+.sticky .main {
+    background: #eee;
+}
+
+.sticky .date {
+    display: none;
+}
+
+.sticky .entry-meta .comments {
+    margin-top: 2px;
+}
+
+/* Page */
+.page .entry-meta .comments {
+    margin-top: 2px;
+}
+
+
+/* =Post Formats
+-------------------------------------------------------------- */
+
+h2.entry-title {
+    font-size: 36px;
+    font-family: var(--accent-font);
+    line-height: 1.1; 
+}
+
+h2.entry-title-central {
+    font-size: 40px;
+    font-family: var(--accent-font);
+    line-height: var(--line-height); 
+    margin-top: 0px;
+}
+
+h2.entry-title > a {
+    font-size: 28px;
+    font-family: var(--accent-font);
+}
+
+/* Aside */
+.format-aside .entry-title {
+    display: none;
+}
+
+.format-aside .entry-content p:first-child {
+    margin-top: 0;
+}
+
+/* Link */
+.format-link .entry-title:after {
+    content: "\2192";
+    font-size: 26px;
+    padding-left: 10px;
+    text-decoration: none;
+}
+
+p > a {
+    font-family: var(--text-body-font);
+    font-size: var(--text-body-size);
+}
+
+/* Quote */
+
+.format-quote blockquote {
+    font-size: var(--text-body-size);
+}
+
+.format-quote blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =Images
+-------------------------------------------------------------- */
+a img {
+    border: none;
+}
+p img {
+    margin-bottom: 0.5em;
+}
+
+/*
+Resize images to fit the main content area.
+- Applies only to images uploaded via WordPress by targeting size-* classes.
+- Other images will be left alone. Use "size-auto" class to apply to other images.
+*/
+
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+    max-width: 100%; /* When images are too wide for containing element, force them to fit. */
+    height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+
+img.alignleft {
+    margin-right: 1em;
+}
+
+img.alignright {
+    margin-left: 1em;
+}
+
+.wp-caption {
+    background: #eee;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    padding: .8em;
+    text-align: center;
+}
+
+.wp-caption img {
+    margin: 0;
+}
+
+.wp-caption a img,
+.wp-caption a:hover img {
+    border: none;
+}
+
+.wp-caption .wp-caption-text {
+    color: #666;
+    font-size: 12px;
+    margin: .5em;
+}
+
+.gallery-caption {
+    color: #666;
+}
+
+.wp-smiley {
+    margin: 0;
+}
+
+.attachment .hentry .entry-meta .navigation {
+    margin: 10px 0 0;
+}
+
+.attachment .navigation img {
+    border: 5px solid #ddd;
+}
+
+.attachment .navigation a:hover img {
+    border-color: #000;
+}
+
+/* =Comments
+----------------------------------------------- */
+#comments {
+    clear: both;
+    margin: 20px 0;
+    padding: 15px;
+    text-align: left;
+    width: 600px;
+}
+
+article.comment {
+    display: block;
+}
+
+#comments #comments-title {
+    background: #555;
+    border-radius: 3px;
+    color: #eee;
+    color: rgba(255,255,255,0.7);
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 5px 20px;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+}
+
+#comments #comments-title em {
+    color: #fff;
+    font-style: normal;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+}
+
+.commentlist {
+    margin-left: 40px;
+    padding-left: 0;
+}
+
+.commentlist .comment,
+.commentlist .reblog {
+    list-style-type: none;
+    margin: 40px 0;
+    padding-left: 10px;
+}
+
+.comment {
+    position: relative;
+}
+
+.comment .comment-author cite {
+    font-style: normal;
+    font-weight: bold;
+}
+
+.comment .comment-meta {
+    font-size: 11px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.comment .comment-meta a {
+    color: #666;
+}
+
+.comment p,
+.reblog p {
+    color: #555;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.comment img.avatar {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    left: -40px;
+    position: absolute;
+}
+
+#comments .bypostauthor > .comment-body {
+    background: #eee;
+    border-radius: 3px;
+    color: #000;
+    margin: 1em 0 3em;
+    padding: 15px;
+    position: relative;
+}
+
+#comments .bypostauthor > .comment-body .comment-meta {
+    right: 15px;
+    top: 18px;
+}
+
+/* Reblogs */
+.commentlist .reblog .comment-meta,
+.commentlist .reblog .comment-author {
+    display: none;
+}
+
+.commentlist .reblog p:first-of-type a {
+    font-weight: bold;
+}
+
+.comment .reply a,
+.reblog .reply a,
+.trackback .reply a,
+.pingback .reply a {
+    background: #eee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #555;
+    font-size: 13px;
+    padding: 3px 8px;
+    text-decoration: none;
+}
+
+.comment .reply a:hover,
+.reblog .reply a:hover,
+.trackback .reply a:hover,
+.pingback .reply a:hover {
+    background: #ddd;
+    border-color: #ccc;
+    text-decoration: none;
+}
+
+#respond #reply-title {
+    font-size: 26px;
+    margin-bottom: 0;
+}
+
+#respond .comment-notes {
+    color: #555;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+#respond input[type=text],
+#respond textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 6px 0;
+    padding: 8px;
+}
+
+#respond input[type=text] {
+    display: block;
+    width: 60%;
+}
+
+#respond textarea {
+    display: block;
+    margin-bottom: 1em;
+    width: 80%;
+}
+
+#respond label {
+    background: #36bcab;
+    border-radius: 3px;
+    color: #c8f1ec;
+    font-size: 13px;
+    padding: 3px 5px;
+}
+
+#respond .form-allowed-tags {
+    display: none;
+}
+
+#respond input[type=submit] {
+    font-size: 18px;
+}
+
+/* =Widgets
+----------------------------------------------- */
+#widgets {
+    border-top: 1px solid #ccc;
+    margin: 30px 0 0 0;
+    padding: 30px 0 0 0;
+    text-align: left;
+}
+
+.widget-title {
+    color: #555;
+    font-family: 'Oswald', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+}
+
+.widget-title a {
+    color: #000;
+    text-decoration: none;
+}
+
+#widgets .widget-area {
+    width: 100%;
+}
+
+#widgets .widget {
+    float: left;
+    padding: 12px;
+    width: 30%;
+}
+
+.widget {
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 0 30px 0;
+}
+
+#widgets .widget:nth-child(3n+1) {
+    clear: left;
+}
+
+.widget ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Authors Widget */
+.widget_authors ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+.widget_authors img {
+	vertical-align: middle;
+}
+.widget_authors img + strong {
+	font-weight: normal;
+	margin-left: 8px;
+}
+.widget_authors a:hover {
+	text-decoration: none;
+}
+
+/* Authors Widget */
+.widget_author_grid ul,
+.widget_authors ul {
+	list-style: none;
+	margin: 0;
+}
+
+ /* RSS Widgets */
+.widget_rss li {
+	margin: 0 0 10px 0;
+}
+
+.widget_rss_links p img {
+	margin-bottom: 0;
+	vertical-align: middle;
+}
+
+
+/* =Footer
+----------------------------------------------- */
+#footer {
+    border-top: 1px solid var(--accent-color);
+    clear: both;
+    color: var(--text-body-color);
+    font-size: 13px;
+    font-weight: bold;
+    height: auto;
+    margin: 50px 0 30px;
+    padding-top: 25px;
+    text-align: center;
+    width: 800px;
+}
