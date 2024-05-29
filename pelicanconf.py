@@ -38,7 +38,7 @@ OUTPUT_PATH = "docs"
 THEME = "themes/politicka-nekultura"
 
 # chunk theme settings
-DEFAULT_DATE_FORMAT = "%Y-%m-%d %H:%M"
+DEFAULT_DATE_FORMAT = "%Y-%m-%d"
 
 SITESUBTITLE = "Blog o političkoj kulturi i srodnim temama."
 
