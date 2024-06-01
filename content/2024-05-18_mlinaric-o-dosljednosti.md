@@ -1,6 +1,6 @@
 title: Stipo Mlinarić o dosljednosti u predizbornoj komunikaciji
 category: politika
-tags: r=0, Stipo Mlinarić, Domovinski Pokret
+tags: r=0,Stipo Mlinarić,Domovinski Pokret
 date: 2024-05-18 12:00
 
 Stipo Mlinarić danas se tijekom

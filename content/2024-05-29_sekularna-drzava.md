@@ -1,6 +1,6 @@
 title: Po Ustavu, Hrvatska je sekularna država
 category: politika
-tags: Most, Petra Mandić
+tags: Most,Petra Mandić
 
 Petra Mandić iz Mosta
 [kaže](https://www.telegram.hr/politika-kriminal/opet-se-javila-mostovka-koja-bi-djecu-slala-u-vjerske-skole-bijesna-spominje-pupovca-rodnu-ideologiju-i-bozicne-priredbe/):

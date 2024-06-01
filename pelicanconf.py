@@ -31,7 +31,7 @@ AUTHOR_FEED_RSS = None
 
 # Social widget
 
-DEFAULT_PAGINATION = 20
+DEFAULT_PAGINATION = 10
 
 OUTPUT_PATH = "docs"
 

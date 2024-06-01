@@ -41,8 +41,7 @@
 }
 
 @font-face {
-    font-family: "Noto Sans Mono Regular";
-    src: url(../resources/fonts/NotoSansMono-Regular-Nerd-Font-Complete.ttf);
+    font-family: "Noto Sans Mono Regular"; src: url(../resources/fonts/NotoSansMono-Regular-Nerd-Font-Complete.ttf);
 }
 
 /* =Base
@@ -53,7 +52,7 @@
     --accent-color: #a0bb64;
 
     --text-body-color: #000000;
-    --text-body-size: 1.2vw;
+    --text-body-size: calc(10pt + 0.5vw);
     --text-accent-color: #697c3e;
 
     --accent-font: "Latin Modern Mono Prop Regular";
@@ -65,7 +64,7 @@
 
     --line-height: 1.45;
 
-    --line-border-width: 0.2vw;
+    --line-border-width: calc(2px + 0.3vw);
 }
 
 body {
@@ -79,13 +78,14 @@ body {
 }
 
 div.entry-content h1 {
-    font-size: 1.7vw;
-    margin-top: 1.8vw;
-    margin-bottom: 1.8vw;
+    font-size: calc(16pt + 1vw);
+    margin-top: calc(5pt + 1.5vw);
+    margin-bottom: calc(7pt + 1.5vw);
+    line-height: 1.15;
 }
 
 div.entry-content h2 {
-    font-size: 1.4vw;
+    font-size: calc(14pt + 1vw);
 }
 
 p {
@@ -100,9 +100,9 @@ p {
 }
 
 #header {
-    margin-top: 7vw;
+    margin-top: calc(5pt + 1vw);
     padding-top: 0;
-    margin-bottom: 2vw;
+    margin-bottom: calc(5pt + 1vw);
     width: 100%;
 }
 
@@ -118,7 +118,7 @@ p {
 #site-title {
     font-family: "Latin Modern Mono Prop Regular", monospace;
     font-weight: normal;
-    font-size: 6vw;
+    font-size: calc(20pt + 2vw);
     margin: 0;
 }
 
@@ -136,10 +136,10 @@ p {
     color: var(--text-body-color);
     display: inline-block;
     font-family: var(--accent-font);
-    font-size: 2vw;
+    font-size: calc(12pt + 0.5vw);
     font-weight: normal;
-    margin-top: 4vw;
-    margin-bottom: 4vw;
+    margin-top: calc(10pt + 0.5vw);
+    margin-bottom: calc(10pt + 0.5vw);
 }
 
 #menu #header-image a {
@@ -150,7 +150,7 @@ p {
 /* Post */
 
 div#post {
-    padding-bottom: 3vw;
+    padding-bottom: calc(15px + 1vw);
     border-bottom: var(--line-border-width) dashed var(--accent-color);
 }
 
@@ -159,20 +159,17 @@ div#post {
 #menu {
     border-bottom: var(--line-border-width) solid var(--accent-color);
     border-top: var(--line-border-width) solid var(--accent-color);
-    margin-bottom: 2vw;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
+    margin-bottom: calc(10pt + 2vw);
+    padding-top: 5pt;
+    padding-bottom: 5pt;
+    margin-bottom: 0;
     text-align: left;
     width: 100%;
 }
 
-#menu img {
-    margin-bottom: 10px;
-}
-
 #menu a {
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
+    margin-left: 10pt;
+    margin-right: 10pt;
     text-decoration: none;
     text-transform: lowercase;
 }
@@ -248,7 +245,7 @@ div#post {
 {
     color: var(--text-body-color);
     font-family: var(--monospace-font);
-    font-size: 1.2vw;
+    font-size: calc(9pt + 0.2vw);
 }
 
 #menu ul li.menu-item > a:hover
@@ -311,15 +308,18 @@ div#post {
     color: var(--text-body-color);
     font-family: var(--monospace-font);
     font-weight: normal;
-    font-size: 1.4vw;
-    margin: 0;
+    font-size: calc(10pt + 0.02vw);
+    margin-left: 0;
+    margin-bottom: calc(8px + 0.4vw);
+    margin-top: calc(10px + 0.4vw);
 }
 
 .hentry .entry-meta .cat-links {
     color: var(--text-accent-color);
     font-size: var(--text-body-size);
     line-height: 1.2vw;
-    margin-top: 1vw;
+    margin-top: 0;
+    margin-bottom: calc(10px + 1vw);
 }
 
 .hentry .entry-meta .cat-links a {
@@ -338,8 +338,8 @@ div#post {
 .entry-title {
     color: var(--text-body-color);
     font-family: var(--accent-font), sans-serif;
-    font-size: 3vw;
-    line-height: 1vw;
+    font-size: calc(14pt + 1vw);
+    line-height: 1.15;
     margin-top: 0;
     margin-bottom: 2vw;
     text-align: left;
@@ -361,7 +361,7 @@ blockquote {
     background: none;
     border-left: 1.2vw solid var(--accent-color);
     color: var(--text-body-color);
-    font-family: var(--text-body-font), serif;
+    font-family: var(--body-font), serif;
     font-size: var(--text-body-size);
     padding-bottom: 1vw;
     padding-left: 1vw;
@@ -374,7 +374,7 @@ a {
     color: var(--text-accent-color);
     font-family: var(--link-font);
     text-decoration: underline;
-    font-size: 0.9vw;
+    font-size: calc(8pt + 0.5vw);
 }
 
 .entry-content a img {
@@ -388,6 +388,7 @@ a {
 .cat-links,
 .tag-links {
     display: block;
+    line-height: 1.15;
 }
 
 .entry-content table {
@@ -422,7 +423,7 @@ a {
 }
 
 a.text-continued {
-    font-family: var(--text-body-font);
+    font-family: var(--body-font);
     color: var(--text-accent-color);
     font-size: var(--text-body-size);
 }
@@ -473,14 +474,14 @@ ul ul, ol ol, ul ol, ol ul {
 /* Page */
 
 h2.entry-title-central {
-    font-size: 3vw;
+    font-size: calc(20pt + 1vw);
     font-family: var(--accent-font);
     line-height: 1.15; 
     margin-top: 0;
 }
 
 h2.entry-title > a {
-    font-size: 2.2vw;
+    font-size: calc(16pt + 0.8vw);
     font-family: var(--accent-font);
     line-height: 1.15; 
 }
@@ -503,7 +504,7 @@ h2.entry-title > a {
 }
 
 p > a {
-    font-family: var(--text-body-font);
+    font-family: var(--body-font);
     font-size: var(--text-body-size);
 }
 
@@ -689,4 +690,67 @@ img.alignright {
 
 #footer a {
     font-size: 0.9vw;
+}
+
+/*
+ * media queries
+*/
+
+@media only screen and (max-width: 800px) {
+    #site-title {
+        font-family: "Latin Modern Mono Prop Regular", monospace;
+        font-weight: normal;
+        font-size: calc(18pt + 1vw);
+        margin: 0;
+    }
+
+    #container {
+        height: auto;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 90vw;
+    }
+
+    #contents {
+        height: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+    }
+
+    blockquote {
+        border-left: 1.2vw solid var(--accent-color);
+        color: var(--text-body-color);
+        font-family: var(--body-font), serif;
+        font-size: var(--text-body-size);
+        padding-bottom: 0.4vw;
+        padding-left: 2vw;
+        padding-right: 0;
+        padding-top: 0.4vw;
+        margin-left: 1vw;
+        margin-right: 15vw;
+        text-align: left;
+    }
+
+    #footer {
+        border-top: var(--line-border-width) solid var(--accent-color);
+        clear: both;
+        color: var(--text-body-color);
+        font-size: calc(7pt + 0.2vw);
+        font-weight: bold;
+        height: auto;
+        margin-top: 3vw;
+        margin-bottom: 2vw;
+        text-align: center;
+        width: 100%;
+    }
+
+        #footer a {
+            font-size: calc(8pt + 0.2vw);
+        }
+
+        #footer img {
+            height: calc(8pt + 0.4vw);
+            width: calc(8pt + 0.4vw);
+        }
 }
