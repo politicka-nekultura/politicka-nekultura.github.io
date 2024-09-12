@@ -22,7 +22,7 @@ sinova je (od najmlađeg ka najstarijem):
 No, nestašluk na stranu, čini se da Josip Đakić ima sinove kad treba primati
 naknadu za odvojen život, ali ih nema kad treba popuniti imovinsku karticu:
 
-![Dio imovinske kartice Josipa Đakića, na kojem se vidi da je 24.7.2019. naveo da nema djece.](../resources/sinovi-josipa-djakica/josip-djakic-ik.png)
+![Dio imovinske kartice Josipa Đakića, na kojem se vidi da je 24.7.2019. naveo da nema djece.]({static}/images/sinovi-josipa-djakica/josip-djakic-ik.png)
 
 Istini za volju, u ranijoj verziji imovinske kartice je naveo da ima djece.
 Možda se zbog <q>nestašluka</q> odrekao sinova?
