@@ -447,6 +447,12 @@ a.text-continued {
 }
 
 /* General */
+
+ol li {
+    margin-bottom: 5px;
+    line-height: var(--line-height);
+}
+
 ol ol {
     list-style: upper-alpha;
 }
@@ -457,6 +463,8 @@ ol ol ol {
 ul ul, ol ol, ul ol, ol ul {
     margin-bottom: 0;
 }
+
+
 
 /* Sticky */
 .sticky .main {
@@ -753,4 +761,10 @@ img.alignright {
             height: calc(8pt + 0.4vw);
             width: calc(8pt + 0.4vw);
         }
+
+    img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
 }

@@ -1,24 +1,20 @@
 import os
 
-FILES_CATEGORY = list(
-    f"category/{file}" for file in os.listdir("docs/category")
-)
+FILES_CATEGORY = list(f"category/{file}" for file in os.listdir("docs/category"))
 
-FILES_TAG = list(
-    f"tag/{file}" for file in os.listdir("docs/tag")
-)
+FILES_TAG = list(f"tag/{file}" for file in os.listdir("docs/tag"))
 
-AUTHOR = 'politicka-nekultura'
+AUTHOR = "politicka-nekultura"
 SITENAME = "/* Politička nekultura */"
 SITEURL = "https://politicka-nekultura.github.io"
 
 PATH = "content"
 
-TIMEZONE = 'Europe/Zagreb'
+TIMEZONE = "Europe/Zagreb"
 
 DEFAULT_DATE = "fs"
 
-DEFAULT_LANG = 'hr'
+DEFAULT_LANG = "hr"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
