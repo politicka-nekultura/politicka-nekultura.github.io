@@ -10,6 +10,8 @@ SITEURL = "https://politicka-nekultura.github.io"
 
 PATH = "content"
 
+STATIC_PATHS = ["images"]
+
 TIMEZONE = "Europe/Zagreb"
 
 DEFAULT_DATE = "fs"
